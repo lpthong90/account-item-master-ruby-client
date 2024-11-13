@@ -1,0 +1,68 @@
+PATH
+  remote: .
+  specs:
+    account-item-master-ruby-client (0.1.0)
+      grpc (~> 1.50)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    bigdecimal (3.1.8)
+    google-protobuf (4.28.3)
+      bigdecimal
+      rake (>= 13)
+    google-protobuf (4.28.3-aarch64-linux)
+      bigdecimal
+      rake (>= 13)
+    google-protobuf (4.28.3-arm64-darwin)
+      bigdecimal
+      rake (>= 13)
+    google-protobuf (4.28.3-x86-linux)
+      bigdecimal
+      rake (>= 13)
+    google-protobuf (4.28.3-x86_64-darwin)
+      bigdecimal
+      rake (>= 13)
+    google-protobuf (4.28.3-x86_64-linux)
+      bigdecimal
+      rake (>= 13)
+    googleapis-common-protos-types (1.16.0)
+      google-protobuf (>= 3.18, < 5.a)
+    grpc (1.67.0)
+      google-protobuf (>= 3.25, < 5.0)
+      googleapis-common-protos-types (~> 1.0)
+    grpc (1.67.0-aarch64-linux)
+      google-protobuf (>= 3.25, < 5.0)
+      googleapis-common-protos-types (~> 1.0)
+    grpc (1.67.0-arm64-darwin)
+      google-protobuf (>= 3.25, < 5.0)
+      googleapis-common-protos-types (~> 1.0)
+    grpc (1.67.0-x86-linux)
+      google-protobuf (>= 3.25, < 5.0)
+      googleapis-common-protos-types (~> 1.0)
+    grpc (1.67.0-x86_64-darwin)
+      google-protobuf (>= 3.25, < 5.0)
+      googleapis-common-protos-types (~> 1.0)
+    grpc (1.67.0-x86_64-linux)
+      google-protobuf (>= 3.25, < 5.0)
+      googleapis-common-protos-types (~> 1.0)
+    grpc-tools (1.67.0)
+    rake (13.2.1)
+
+PLATFORMS
+  aarch64-linux
+  arm64-darwin
+  ruby
+  x86-linux
+  x86_64-darwin
+  x86_64-linux
+
+DEPENDENCIES
+  account-item-master-ruby-client!
+  bundler (~> 2.0)
+  grpc
+  grpc-tools
+  rake (~> 13.0)
+
+BUNDLED WITH
+   2.5.14

@@ -1,0 +1,103 @@
+syntax = "proto3";
+
+package account_item_master;
+
+service AccountItemMasterService {
+  // Account related operations
+  rpc GetAccount (GetAccountRequest) returns (Account) {}
+  rpc ListAccounts (ListAccountsRequest) returns (ListAccountsResponse) {}
+  rpc CreateAccount (CreateAccountRequest) returns (Account) {}
+  rpc UpdateAccount (UpdateAccountRequest) returns (Account) {}
+  rpc DeleteAccount (DeleteAccountRequest) returns (DeleteAccountResponse) {}
+
+  // Item related operations
+  rpc GetItem (GetItemRequest) returns (Item) {}
+  rpc ListItems (ListItemsRequest) returns (ListItemsResponse) {}
+  rpc CreateItem (CreateItemRequest) returns (Item) {}
+  rpc UpdateItem (UpdateItemRequest) returns (Item) {}
+  rpc DeleteItem (DeleteItemRequest) returns (DeleteItemResponse) {}
+}
+
+// Account messages
+message Account {
+  string id = 1;
+  string name = 2;
+  string email = 3;
+  string status = 4;
+  string created_at = 5;
+  string updated_at = 6;
+}
+
+message GetAccountRequest {
+  string account_id = 1;
+}
+
+message ListAccountsRequest {
+  int32 page_size = 1;
+  string page_token = 2;
+}
+
+message ListAccountsResponse {
+  repeated Account accounts = 1;
+  string next_page_token = 2;
+}
+
+message CreateAccountRequest {
+  string name = 1;
+  string email = 2;
+}
+
+message UpdateAccountRequest {
+  string account_id = 1;
+  Account account = 2;
+}
+
+message DeleteAccountRequest {
+  string account_id = 1;
+}
+
+message DeleteAccountResponse {
+  bool success = 1;
+}
+
+// Item messages
+message Item {
+  string id = 1;
+  string name = 2;
+  string description = 3;
+  string category = 4;
+  double price = 5;
+  string created_at = 6;
+  string updated_at = 7;
+}
+
+message GetItemRequest {
+  string item_id = 1;
+}
+
+message ListItemsRequest {
+  int32 page_size = 1;
+  string page_token = 2;
+}
+
+message ListItemsResponse {
+  repeated Item items = 1;
+  string next_page_token = 2;
+}
+
+message CreateItemRequest {
+  Item item = 1;
+}
+
+message UpdateItemRequest {
+  string item_id = 1;
+  Item item = 2;
+}
+
+message DeleteItemRequest {
+  string item_id = 1;
+}
+
+message DeleteItemResponse {
+  bool success = 1;
+}
